@@ -12,8 +12,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script>
-      $(function() {
-        $("#dob").datepicker({
+      // this is jQuery: $(selector).action()
+      $(function() { // 文档就绪事件: 简写方式：$(function() {})  即在 DOM 加载完成后才可以对 DOM 进行操作
+        $("#dob").datepicker({ //select the html element with id = "dob"
           changeMonth: true,
           changeYear: true,
           yearRange: "-100:+0",

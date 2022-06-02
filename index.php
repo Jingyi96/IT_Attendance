@@ -7,7 +7,7 @@ $title = 'Index';
 require_once 'includes/header.php';
 require_once 'db/conn.php'; // connect the database
 
-$results = $crud->getSpecialties();
+$results = $crud->getSpecialties(); // results = $crud.getSpecialties()
 ?>
 
 <h1>Registration for IT conference</h1>
@@ -34,7 +34,7 @@ $results = $crud->getSpecialties();
     <div class="mb-3">
         <label for="specialty">Area Of Expertise</label>
         <select class="form-select" id="specialty" name="specialty">
-            <!-- <option value="1">Database Admin</option>
+            <!-- <option>Database Admin</option>
             <option>Software Developer</option>
             <option>Web Administration</option>
             <option>Other</option> -->
