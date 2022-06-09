@@ -29,17 +29,10 @@ $results = $crud->getAttendees();
     <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
         <!-- 用两个php写while loop是因为中间要写HTML -->
         <tr>
-            <!-- 从database中获取数据，必须和database中结构名字完全一致 -->
+            <!-- 从database中获取数据，必须和database中每列名字完全一致 -->
             <td><?php echo $r['attendee_id'] ?></td>
             <td><?php echo $r['firstname'] ?></td>
             <td><?php echo $r['lastname'] ?></td>
-
-            <!-- <td><?php echo $r['dateofbirth'] ?></td>
-            <td><?php echo $r['email'] ?></td>
-            <td><?php echo $r['contactnumber'] ?></td> -->
-
-            <!-- <td><?php echo $r['spectialty_id'] ?></td> -->
-
             <td><?php echo $r['name'] ?></td>
             <!-- 重要！！！send attendee_id to getAttendeeDetails($id) in crud.php -->
             <!-- create a link with query string: variable name: id, which is used by getAttendeeDetails($id) -->

@@ -39,7 +39,7 @@ class crud
     public function getAttendees()
     {
         try {
-            // 把表attendee和表specialties中两列specialty_id关联在一起
+            // 把表attendee和表specialties根据共同的一列specialty_id关联在一起
             // 这样我们就能拿到specialties表中的所有数据，包括name这一列
             $sql = "SELECT * FROM `attendee` a inner join specialties s on a.specialty_id = s.specialty_id";
             $result = $this->db->query($sql);
@@ -66,7 +66,7 @@ class crud
     {
         try {
             // :id is a placeholder
-            $sql = "select * from attendee a inner join specialties s on a.specialty_id = s.specialty_id 
+            $sql = "SELECT * FROM `attendee` a inner join specialties s on a.specialty_id = s.specialty_id 
                  where attendee_id = :id";
             $stmt = $this->db->prepare($sql);
             $stmt->bindparam(':id', $id);

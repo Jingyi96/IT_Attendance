@@ -38,6 +38,8 @@ $results = $crud->getSpecialties(); // results = $crud.getSpecialties()
             <option>Software Developer</option>
             <option>Web Administration</option>
             <option>Other</option> -->
+
+            <!-- get all ids and names in the specialties table for option tags -->
             <?php while ($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
                 <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']; ?></option>
             <?php } ?>
